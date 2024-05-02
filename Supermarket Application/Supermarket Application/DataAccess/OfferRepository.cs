@@ -42,7 +42,7 @@ namespace Supermarket_Application.DataAccess
             var offer = _context.Offers.Find(id);
             if (offer != null)
             {
-                _context.Offers.Remove(offer);
+                offer.IsActive = false;
                 _context.SaveChanges();
             }
         }

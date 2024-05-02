@@ -1,10 +1,8 @@
 ﻿using Supermarket_Application.Models;
-using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Supermarket_Application.DataAccess
 {
@@ -44,7 +42,7 @@ namespace Supermarket_Application.DataAccess
             var user = _context.Users.Find(id);
             if (user != null)
             {
-                _context.Users.Remove(user);
+                user.IsActive = false;
                 _context.SaveChanges();
             }
         }

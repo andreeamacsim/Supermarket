@@ -11,6 +11,6 @@ namespace Supermarket_Application.Models
         public int ManufacturerID { get; set; }
         public string ManufacturerName { get; set; }
         public string CountryOfOrigin { get; set; }
-        public bool IsActive { get; set; } 
+        public bool IsActive { get; set; } = true;
     }
 }

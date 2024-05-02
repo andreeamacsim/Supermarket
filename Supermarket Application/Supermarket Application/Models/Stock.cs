@@ -16,7 +16,7 @@ namespace Supermarket_Application.Models
         public DateTime ExpirationDate { get; set; }
         public decimal PurchasePrice { get; set; }
         public decimal SellingPrice { get; set; }
-        public bool IsActive { get; set; } 
+        public bool IsActive { get; set; } = true;
 
         
         public virtual Product Product { get; set; }

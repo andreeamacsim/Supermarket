@@ -13,7 +13,7 @@ namespace Supermarket_Application.Models
         public string Barcode { get; set; }
         public int CategoryID { get; set; }
         public int ManufacturerID { get; set; }
-        public bool IsActive { get; set; } 
+        public bool IsActive { get; set; } = true;
 
       
         public virtual Category Category { get; set; }

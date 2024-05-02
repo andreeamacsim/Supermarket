@@ -44,7 +44,7 @@ namespace Supermarket_Application.DataAccess
             var stock = _context.Stocks.Find(id);
             if (stock != null)
             {
-                _context.Stocks.Remove(stock);
+                stock.IsActive = false;
                 _context.SaveChanges();
             }
         }

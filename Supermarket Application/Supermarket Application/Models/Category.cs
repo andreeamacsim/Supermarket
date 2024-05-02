@@ -10,6 +10,6 @@ namespace Supermarket_Application.Models
     {
         public int CategoryID { get; set; }
         public string CategoryName { get; set; }
-        public bool IsActive { get; set; } 
+        public bool IsActive { get; set; } = true;
     }
 }

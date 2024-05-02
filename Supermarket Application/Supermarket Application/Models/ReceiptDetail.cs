@@ -12,7 +12,7 @@ namespace Supermarket_Application.Models
         public int ProductID { get; set; }
         public int Quantity { get; set; }
         public decimal Subtotal { get; set; }
-        public bool IsActive { get; set; } 
+        public bool IsActive { get; set; } = true;
 
         
         public virtual Receipt Receipt { get; set; }

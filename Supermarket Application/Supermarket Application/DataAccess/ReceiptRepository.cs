@@ -42,7 +42,7 @@ namespace Supermarket_Application.DataAccess
             var receipt = _context.Receipts.Find(id);
             if (receipt != null)
             {
-                _context.Receipts.Remove(receipt);
+                receipt.IsActive = false;
                 _context.SaveChanges();
             }
         }

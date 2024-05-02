@@ -14,7 +14,7 @@ namespace Supermarket_Application.Models
         public decimal DiscountPercentage { get; set; }
         public DateTime ValidFrom { get; set; }
         public DateTime ValidUntil { get; set; }
-        public bool IsActive { get; set; } 
+        public bool IsActive { get; set; } = true;
 
        
         public virtual Product Product { get; set; }

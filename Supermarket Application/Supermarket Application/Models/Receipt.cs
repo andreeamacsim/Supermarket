@@ -12,7 +12,7 @@ namespace Supermarket_Application.Models
         public DateTime DateIssued { get; set; }
         public int CashierID { get; set; }
         public decimal TotalAmount { get; set; }
-        public bool IsActive { get; set; } 
+        public bool IsActive { get; set; } = true;
 
        
         public virtual User Cashier { get; set; }

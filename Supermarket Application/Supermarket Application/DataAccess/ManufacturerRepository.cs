@@ -41,7 +41,7 @@ namespace Supermarket_Application.DataAccess
             var manufacturer = _context.Manufacturers.Find(id);
             if (manufacturer != null)
             {
-                _context.Manufacturers.Remove(manufacturer);
+                manufacturer.IsActive = false;
                 _context.SaveChanges();
             }
         }
