@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Andreea\Desktop\Supermarket\Supermarket Application\Supermarket Application\App.xaml
-8-1026946187
+6-406039051
 
-43763962138
-16-1198452257
-MainWindow.xaml;Views\CategoryView.xaml;Views\ManufacturerView.xaml;Views\OfferView.xaml;Views\ProductView.xaml;Views\ReceiptView.xaml;Views\StockView.xaml;Views\UserView.xaml;
+371786101221
+17-95079386
+Views\AdministratorView.xaml;Views\CashierView.xaml;Views\LoginView.xaml;Views\MainWindow.xaml;Views\RegisterView.xaml;Views\UserView.xaml;
 
 False
 

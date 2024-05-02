@@ -1,0 +1,52 @@
+﻿<Window x:Class="Supermarket_Application.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:Supermarket_Application.ViewModels"
+        Title="ManufacturerView" Height="450" Width="430" WindowStartupLocation="CenterScreen">
+    <Window.DataContext>
+        <local:MainViewModel/>
+    </Window.DataContext>
+    <Window.Resources>
+        <!-- Stil pentru butoane -->
+        <Style x:Key="CustomButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#FFFE8893"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Padding" Value="20"/>
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="5">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+    </Window.Resources>
+    <Grid Margin="0,0,-35,0">
+        <Image Source="C:\Users\Andreea\Desktop\Supermarket\Supermarket Application\Supermarket Application\window2.webp" OpacityMask="Black" Margin="0,0,31,0" />
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Button Content="Administrator" Command="{Binding OpenLoginCommand}" Style="{StaticResource CustomButtonStyle}" Width="104"/>
+            <Button Content="Cashier" Command="{Binding OpenLoginCommand}" Style="{StaticResource CustomButtonStyle}"/>
+        </StackPanel>
+        <Label Content="SUPERMARKET" HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Top" Width="124" FontWeight="Black" FontStretch="SemiExpanded" FontSize="14">
+            <Label.Foreground>
+                <RadialGradientBrush>
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="#FFDA838B" Offset="0.009"/>
+                    <GradientStop Color="#FF8F2335" Offset="1"/>
+                    <GradientStop Color="#FFC14166" Offset="0.806"/>
+                    <GradientStop Color="#FFC14266" Offset="0.779"/>
+                    <GradientStop Color="#FFCA1E53" Offset="0.979"/>
+                </RadialGradientBrush>
+            </Label.Foreground>
+        </Label>
+    </Grid>
+</Window>

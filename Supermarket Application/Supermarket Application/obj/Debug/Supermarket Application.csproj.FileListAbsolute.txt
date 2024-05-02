@@ -6,11 +6,9 @@ C:\Users\Andreea\Desktop\Supermarket\Supermarket Application\Supermarket Applica
 C:\Users\Andreea\Desktop\Supermarket\Supermarket Application\Supermarket Application\bin\Debug\EntityFramework.xml
 C:\Users\Andreea\Desktop\Supermarket\Supermarket Application\Supermarket Application\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Andreea\Desktop\Supermarket\Supermarket Application\Supermarket Application\obj\Debug\Supermarket Application.csproj.AssemblyReference.cache
-C:\Users\Andreea\Desktop\Supermarket\Supermarket Application\Supermarket Application\obj\Debug\MainWindow.g.cs
 C:\Users\Andreea\Desktop\Supermarket\Supermarket Application\Supermarket Application\obj\Debug\App.g.cs
 C:\Users\Andreea\Desktop\Supermarket\Supermarket Application\Supermarket Application\obj\Debug\Supermarket Application_MarkupCompile.cache
 C:\Users\Andreea\Desktop\Supermarket\Supermarket Application\Supermarket Application\obj\Debug\Supermarket Application_MarkupCompile.lref
-C:\Users\Andreea\Desktop\Supermarket\Supermarket Application\Supermarket Application\obj\Debug\MainWindow.baml
 C:\Users\Andreea\Desktop\Supermarket\Supermarket Application\Supermarket Application\obj\Debug\Supermarket Application.g.resources
 C:\Users\Andreea\Desktop\Supermarket\Supermarket Application\Supermarket Application\obj\Debug\Supermarket_Application.Properties.Resources.resources
 C:\Users\Andreea\Desktop\Supermarket\Supermarket Application\Supermarket Application\obj\Debug\Supermarket Application.csproj.GenerateResource.cache
@@ -18,17 +16,16 @@ C:\Users\Andreea\Desktop\Supermarket\Supermarket Application\Supermarket Applica
 C:\Users\Andreea\Desktop\Supermarket\Supermarket Application\Supermarket Application\obj\Debug\Supermarket Application.csproj.CopyComplete
 C:\Users\Andreea\Desktop\Supermarket\Supermarket Application\Supermarket Application\obj\Debug\Supermarket Application.exe
 C:\Users\Andreea\Desktop\Supermarket\Supermarket Application\Supermarket Application\obj\Debug\Supermarket Application.pdb
-C:\Users\Andreea\Desktop\Supermarket\Supermarket Application\Supermarket Application\obj\Debug\Views\CategoryView.g.cs
-C:\Users\Andreea\Desktop\Supermarket\Supermarket Application\Supermarket Application\obj\Debug\Views\ManufacturerView.g.cs
-C:\Users\Andreea\Desktop\Supermarket\Supermarket Application\Supermarket Application\obj\Debug\Views\OfferView.g.cs
-C:\Users\Andreea\Desktop\Supermarket\Supermarket Application\Supermarket Application\obj\Debug\Views\ProductView.g.cs
-C:\Users\Andreea\Desktop\Supermarket\Supermarket Application\Supermarket Application\obj\Debug\Views\ReceiptView.g.cs
-C:\Users\Andreea\Desktop\Supermarket\Supermarket Application\Supermarket Application\obj\Debug\Views\StockView.g.cs
 C:\Users\Andreea\Desktop\Supermarket\Supermarket Application\Supermarket Application\obj\Debug\Views\UserView.g.cs
-C:\Users\Andreea\Desktop\Supermarket\Supermarket Application\Supermarket Application\obj\Debug\Views\CategoryView.baml
-C:\Users\Andreea\Desktop\Supermarket\Supermarket Application\Supermarket Application\obj\Debug\Views\ManufacturerView.baml
-C:\Users\Andreea\Desktop\Supermarket\Supermarket Application\Supermarket Application\obj\Debug\Views\OfferView.baml
-C:\Users\Andreea\Desktop\Supermarket\Supermarket Application\Supermarket Application\obj\Debug\Views\ProductView.baml
-C:\Users\Andreea\Desktop\Supermarket\Supermarket Application\Supermarket Application\obj\Debug\Views\ReceiptView.baml
-C:\Users\Andreea\Desktop\Supermarket\Supermarket Application\Supermarket Application\obj\Debug\Views\StockView.baml
 C:\Users\Andreea\Desktop\Supermarket\Supermarket Application\Supermarket Application\obj\Debug\Views\UserView.baml
+C:\Users\Andreea\Desktop\Supermarket\Supermarket Application\Supermarket Application\obj\Debug\Views\MainWindow.g.cs
+C:\Users\Andreea\Desktop\Supermarket\Supermarket Application\Supermarket Application\obj\Debug\Views\MainWindow.baml
+C:\Users\Andreea\Desktop\Supermarket\Supermarket Application\Supermarket Application\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Andreea\Desktop\Supermarket\Supermarket Application\Supermarket Application\obj\Debug\Views\LoginView.g.cs
+C:\Users\Andreea\Desktop\Supermarket\Supermarket Application\Supermarket Application\obj\Debug\Views\LoginView.baml
+C:\Users\Andreea\Desktop\Supermarket\Supermarket Application\Supermarket Application\obj\Debug\Views\RegisterView.g.cs
+C:\Users\Andreea\Desktop\Supermarket\Supermarket Application\Supermarket Application\obj\Debug\Views\RegisterView.baml
+C:\Users\Andreea\Desktop\Supermarket\Supermarket Application\Supermarket Application\obj\Debug\Views\AdministratorView.g.cs
+C:\Users\Andreea\Desktop\Supermarket\Supermarket Application\Supermarket Application\obj\Debug\Views\CashierView.g.cs
+C:\Users\Andreea\Desktop\Supermarket\Supermarket Application\Supermarket Application\obj\Debug\Views\AdministratorView.baml
+C:\Users\Andreea\Desktop\Supermarket\Supermarket Application\Supermarket Application\obj\Debug\Views\CashierView.baml

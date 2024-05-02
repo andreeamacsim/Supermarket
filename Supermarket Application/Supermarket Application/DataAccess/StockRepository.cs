@@ -3,8 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Configuration;
+
 
 namespace Supermarket_Application.DataAccess
 {
@@ -16,9 +16,14 @@ namespace Supermarket_Application.DataAccess
         {
             _context = context;
         }
-
+        private decimal GetMarkupPercentage()
+        {
+            return Convert.ToDecimal(ConfigurationManager.AppSettings["MarkupPercentage"]);
+        }
         public void Add(Stock stock)
         {
+            decimal markupPercentage = GetMarkupPercentage();
+            stock.SellingPrice = stock.PurchasePrice + (stock.PurchasePrice * markupPercentage / 100);
             _context.Stocks.Add(stock);
             _context.SaveChanges();
         }
@@ -35,9 +40,28 @@ namespace Supermarket_Application.DataAccess
 
         public void Update(Stock stock)
         {
+            var existingStock = _context.Stocks.AsNoTracking().FirstOrDefault(s => s.StockID == stock.StockID);
+            if (existingStock == null)
+            {
+                throw new ArgumentException("Stock isn't  found");
+            }
+
+            
+            if (existingStock.PurchasePrice != stock.PurchasePrice)
+            {
+                throw new InvalidOperationException("Modification of purchase price is not allowed after entry.");
+            }
+
+            
+            if (stock.SellingPrice < stock.PurchasePrice)
+            {
+                throw new InvalidOperationException("Selling price cannot be less than the purchase price.");
+            }
+
             _context.Entry(stock).State = EntityState.Modified;
             _context.SaveChanges();
         }
+
 
         public void Delete(int id)
         {
