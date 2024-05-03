@@ -37,3 +37,9 @@ C:\Users\Andreea\Desktop\Supermarket\Supermarket Application\Supermarket Applica
 C:\Users\Andreea\Desktop\Supermarket\Supermarket Application\Supermarket Application\obj\Debug\Views\UpdateProductPriceView.baml
 C:\Users\Andreea\Desktop\Supermarket\Supermarket Application\Supermarket Application\obj\Debug\Views\AddStockView.g.cs
 C:\Users\Andreea\Desktop\Supermarket\Supermarket Application\Supermarket Application\obj\Debug\Views\AddStockView.baml
+C:\Users\Andreea\Desktop\Supermarket\Supermarket Application\Supermarket Application\obj\Debug\Views\SearchDataView.g.cs
+C:\Users\Andreea\Desktop\Supermarket\Supermarket Application\Supermarket Application\obj\Debug\Views\SearchDataView.baml
+C:\Users\Andreea\Desktop\Supermarket\Supermarket Application\Supermarket Application\obj\Debug\Views\ProductDisplayByManufacturer.g.cs
+C:\Users\Andreea\Desktop\Supermarket\Supermarket Application\Supermarket Application\obj\Debug\Views\ProductDisplayByManufacturer.baml
+C:\Users\Andreea\Desktop\Supermarket\Supermarket Application\Supermarket Application\obj\Debug\Views\CategoryTotalPriceView.g.cs
+C:\Users\Andreea\Desktop\Supermarket\Supermarket Application\Supermarket Application\obj\Debug\Views\CategoryTotalPriceView.baml

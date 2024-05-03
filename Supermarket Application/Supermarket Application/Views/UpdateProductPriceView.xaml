@@ -3,10 +3,54 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Supermarket_Application.Views"
+        xmlns:local="clr-namespace:Supermarket_Application.ViewModels" 
         mc:Ignorable="d"
-        Title="UpdateProductPriceView" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+        Title="Update Product Price" Height="300" Width="500" WindowStartupLocation="CenterScreen">
+    <Window.DataContext>
+        <local:AddStockViewModel/>
+    </Window.DataContext>
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\Andreea\Desktop\Supermarket\Supermarket Application\Supermarket Application\updatePrice.avif" Stretch="Fill"/>
+        </Grid.Background>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
         
+        <Label Content="Select Product:" Margin="10" FontSize="16" FontWeight="Bold" Foreground="#FFAB504B"/>
+        <ComboBox ItemsSource="{Binding Products}" 
+                  DisplayMemberPath="ProductName" 
+                  SelectedValuePath="ProductID" 
+                  SelectedValue="{Binding ProductID}" 
+                  VerticalAlignment="Center"
+                  Background="White"
+                  Foreground="Black" 
+                  Margin="140,0,25,0"/>
+
+       
+        <Label Content="New Selling Price:" Margin="10" Grid.Row="1" FontSize="16" FontWeight="Bold" Foreground="#FFAB504B"/>
+        <TextBox Text="{Binding NewSellingPrice}" Margin="176,10,60,16" Grid.Row="1"/>
+
+        <!-- Update Button -->
+        <Button Content="Update Price" Command="{Binding UpdatePriceCommand}" Margin="10,20,10,0" Grid.Row="3" Background="#FFAB504B" Foreground="White" BorderBrush="White" FontWeight="Bold" FontSize="16">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="Button">
+                                <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1" CornerRadius="5">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
     </Grid>
 </Window>

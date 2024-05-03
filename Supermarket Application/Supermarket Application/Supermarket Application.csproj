@@ -70,8 +70,12 @@
     <Compile Include="ViewModels\AddProductViewModel.cs" />
     <Compile Include="ViewModels\AddStockViewModel.cs" />
     <Compile Include="ViewModels\AdministratorViewModel.cs" />
+    <Compile Include="ViewModels\CategoryTotalPriceViewModel.cs" />
+    <Compile Include="ViewModels\LogicalDeletionViewModel.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\RegisterViewModel.cs" />
+    <Compile Include="ViewModels\SearchDataViewModel.cs" />
     <Compile Include="Views\AddProductView.xaml.cs">
       <DependentUpon>AddProductView.xaml</DependentUpon>
     </Compile>
@@ -84,14 +88,23 @@
     <Compile Include="Views\CashierView.xaml.cs">
       <DependentUpon>CashierView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\CategoryTotalPriceView.xaml.cs">
+      <DependentUpon>CategoryTotalPriceView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\LogicalDeletionView.xaml.cs">
       <DependentUpon>LogicalDeletionView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\LoginView.xaml.cs">
       <DependentUpon>LoginView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\ProductDisplayByManufacturer.xaml.cs">
+      <DependentUpon>ProductDisplayByManufacturer.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\RegisterView.xaml.cs">
       <DependentUpon>RegisterView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SearchDataView.xaml.cs">
+      <DependentUpon>SearchDataView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\UpdateProductPriceView.xaml.cs">
       <DependentUpon>UpdateProductPriceView.xaml</DependentUpon>
@@ -112,6 +125,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\CashierView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CategoryTotalPriceView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -150,7 +167,15 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\ProductDisplayByManufacturer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\RegisterView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SearchDataView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

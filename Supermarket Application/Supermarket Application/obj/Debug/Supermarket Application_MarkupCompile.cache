@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Andreea\Desktop\Supermarket\Supermarket Application\Supermarket Application\App.xaml
-10-752094918
+131562094104
 
-43821339385
+50-36103450
 17-95079386
-Views\AddProductView.xaml;Views\AddStockView.xaml;Views\AdministratorView.xaml;Views\CashierView.xaml;Views\LogicalDeletionView.xaml;Views\LoginView.xaml;Views\MainWindow.xaml;Views\RegisterView.xaml;Views\UpdateProductPriceView.xaml;Views\UserView.xaml;
+Views\AddProductView.xaml;Views\AddStockView.xaml;Views\AdministratorView.xaml;Views\CashierView.xaml;Views\CategoryTotalPriceView.xaml;Views\LogicalDeletionView.xaml;Views\LoginView.xaml;Views\MainWindow.xaml;Views\ProductDisplayByManufacturer.xaml;Views\RegisterView.xaml;Views\SearchDataView.xaml;Views\UpdateProductPriceView.xaml;Views\UserView.xaml;
 
 False
 

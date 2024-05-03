@@ -9,12 +9,15 @@ namespace Supermarket_Application.ViewModels
         public ICommand OpenAddProductCommand { get; private set; }
         public ICommand OpenUpdateProductPriceCommand { get; private set; }
         public ICommand OpenLogicalDeletionCommand { get; private set; }
+        public ICommand OpenSearchDataCommand {  get; private set; }
 
         public AdministratorViewModel()
         {
             OpenAddProductCommand = new RelayCommand(OpenAddProduct);
             OpenUpdateProductPriceCommand = new RelayCommand(OpenUpdateProductPrice);
             OpenLogicalDeletionCommand = new RelayCommand(OpenLogicalDeletion);
+            OpenSearchDataCommand = new RelayCommand(OpenSearchData);
+
         }
 
         private void OpenAddProduct(object obj)
@@ -35,6 +38,11 @@ namespace Supermarket_Application.ViewModels
             logicalDeletionView.ShowDialog();
         }
 
+        private void OpenSearchData(object obj)
+        {
+            SearchDataView searchDataView = new SearchDataView();
+            searchDataView.ShowDialog();
+        }
         public event PropertyChangedEventHandler PropertyChanged;
         protected virtual void OnPropertyChanged(string propertyName)
         {

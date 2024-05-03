@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Supermarket_Application.Models
 {
+    [Table("Products")]
     public class Product
     {
         public int ProductID { get; set; }
@@ -16,8 +18,7 @@ namespace Supermarket_Application.Models
         public bool IsActive { get; set; } = true;
 
       
-        public virtual Category Category { get; set; }
-        public virtual Manufacturer Manufacturer { get; set; }
+       
     }
 
 }

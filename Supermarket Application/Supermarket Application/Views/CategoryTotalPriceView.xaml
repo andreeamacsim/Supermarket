@@ -1,0 +1,39 @@
+﻿<Window x:Class="Supermarket_Application.Views.CategoryTotalPriceView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Supermarket_Application.Views"
+        xmlns:vm="clr-namespace:Supermarket_Application.ViewModels"
+        mc:Ignorable="d"
+        Title="CategoryTotalPriceView" Height="250" Width="500">
+    <Window.DataContext>
+        <vm:CategoryTotalPriceViewModel/>
+    </Window.DataContext>
+    <Grid>
+        <Image Source="C:\Users\Andreea\Desktop\Supermarket\Supermarket Application\Supermarket Application\adminBackground.jpeg" Stretch="UniformToFill" />
+        <DataGrid ItemsSource="{Binding CategoryTotalPrices}" AutoGenerateColumns="False"
+                  HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="-0.182,0.628" Background="#FFFCD7CF" FontFamily="Sitka Small" FontWeight="Bold" FontStyle="Italic"
+                  ColumnWidth="*" Width="450" Height="22">
+            <DataGrid.Resources>
+                <!-- Stil pentru celule -->
+                <Style TargetType="DataGridCell">
+                    <Setter Property="Foreground" Value="#FFCC244A"/>
+                    <Setter Property="Background" Value="LightPink"/>
+                    <Setter Property="Padding" Value="5"/>
+                    <Setter Property="BorderThickness" Value="1"/>
+                    <Setter Property="BorderBrush" Value="#FFFFE3D8"/>
+                </Style>
+                <Style TargetType="DataGridColumnHeader">
+                    <Setter Property="Foreground" Value="#FFE35C8E"/>
+                    <Setter Property="FontWeight" Value="Bold"/>
+                    <Setter Property="FontStyle" Value="Italic"/>
+                </Style>
+            </DataGrid.Resources>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Category Name" Binding="{Binding CategoryName}" Width="*"/>
+                <DataGridTextColumn Header="Total Price" Binding="{Binding TotalPrice, StringFormat='{}{0:C}'}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
