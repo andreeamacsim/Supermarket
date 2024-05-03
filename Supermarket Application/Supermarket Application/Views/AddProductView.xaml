@@ -1,12 +1,69 @@
 ﻿<Window x:Class="Supermarket_Application.Views.AddProductView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Supermarket_Application.Views"
-        mc:Ignorable="d"
-        Title="AddProductView" Height="450" Width="800">
-    <Grid>
-        
+        xmlns:local="clr-namespace:Supermarket_Application.ViewModels"
+        Title="Add Product" Height="450" Width="808" WindowStartupLocation="CenterScreen">
+    <Window.DataContext>
+        <local:AddProductViewModel/>
+    </Window.DataContext>
+
+    <Grid >
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\Andreea\Desktop\Supermarket\Supermarket Application\Supermarket Application\addProduct.jpeg" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Product Name -->
+        <Label Content="Product Name:" Grid.Row="0" Foreground="#FFF08396" FontFamily="Cascadia Mono" FontSize="16" FontWeight="Bold"/>
+        <!-- Pink label text color -->
+        <TextBox Text="{Binding Product.ProductName, UpdateSourceTrigger=PropertyChanged}" Grid.Row="0" Margin="120,0,10,10" Width="300" Background="#FFF8E9E2"/>
+
+        <!-- Barcode -->
+        <Label Content="Barcode:" Grid.Row="1" Foreground="#FFF08396" FontFamily="Cascadia Mono" FontSize="16" FontWeight="Bold"/>
+        <TextBox Text="{Binding Product.Barcode, UpdateSourceTrigger=PropertyChanged}" Grid.Row="1" Margin="120,0,10,10" Width="300" Background="#FFF8E9E2"/>
+
+        <!-- Category Selection -->
+        <Label Content="Category:" Grid.Row="2" Foreground="#FFF08396" FontFamily="Cascadia Mono" FontSize="16" FontWeight="Bold"/>
+        <ComboBox ItemsSource="{Binding Categories}" 
+                  DisplayMemberPath="CategoryName" 
+                  SelectedValuePath="CategoryID" 
+                  SelectedValue="{Binding Product.CategoryID}" 
+                  Grid.Row="2" Margin="120,0,10,10" Width="300">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1">
+                    <GradientStop Color="#FFF0F0F0"/>
+                    <GradientStop Color="#FFEDEDED" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+        </ComboBox>
+
+        <!-- Manufacturer Selection -->
+        <Label Content="Manufacturer:" Grid.Row="3" Foreground="#FFF08396" FontSize="16" FontFamily="Cascadia Mono" FontWeight="Bold"/>
+        <ComboBox ItemsSource="{Binding Manufacturers}" 
+                  DisplayMemberPath="ManufacturerName" 
+                  SelectedValuePath="ManufacturerID" 
+                  SelectedValue="{Binding Product.ManufacturerID}" 
+                  Grid.Row="3" Margin="120,0,10,10" Width="300"/>
+
+        <!-- Add Product Button -->
+        <Button Content="Add Product" 
+                Command="{Binding AddProductCommand}" 
+                Grid.Row="4" 
+                Margin="120,20,10,10" Width="300" Height="40" Background="#FFEBB8B4" FontFamily="Cascadia Mono" BorderBrush="#FFFDF8F2"/>
+        <!-- Pink button background -->
+
+        <Button Content="Add Stock" 
+                Command="{Binding OpenAddStockCommand}" 
+                Grid.Row="5" 
+                Margin="309,10,199,194" Height="40" Background="#FFEBB8B4" Foreground="Black" FontFamily="Cascadia Mono" BorderBrush="#FFFDF8F2"/>
     </Grid>
 </Window>

@@ -1,0 +1,58 @@
+﻿<Window x:Class="Supermarket_Application.Views.AddStockView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:Supermarket_Application.ViewModels"
+        Title="Add Stock" Height="450" Width="600" WindowStartupLocation="CenterScreen">
+    <Window.DataContext>
+        <local:AddStockViewModel/>
+    </Window.DataContext>
+    <Grid >
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\Andreea\Desktop\Supermarket\Supermarket Application\Supermarket Application\addStock2.jpeg" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Label Content="Product ID:" Grid.Row="7" Margin="4,45,-4,-64"/>
+        <ComboBox ItemsSource="{Binding Products}" 
+          DisplayMemberPath="ProductName" 
+          SelectedValuePath="ProductID" 
+          SelectedValue="{Binding ProductID}" 
+          Grid.Row="7" 
+          Margin="106,45,113,-64" 
+          Width="200"
+            VerticalAlignment="Center"
+            Background="White"
+            Foreground="Black"
+            />
+
+
+            <Label Content="Purchase Price:" Grid.Row="7" Margin="2,96,446,-115"/>
+        <TextBox Text="{Binding PurchasePrice}" Grid.Row="7" Margin="108,96,113,-114"/>
+
+        <Label Content="Quantity:" Grid.Row="7" Margin="2,147,510,-166"/>
+        <TextBox Text="{Binding Quantity}" Grid.Row="7" Margin="108,147,113,-166"/>
+
+        <Label Content="Unit of Measure:" Grid.Row="7" Margin="4,191,444,-210"/>
+        <TextBox Text="{Binding UnitOfMeasure}" Grid.Row="7" Margin="109,191,113,-210"/>
+
+        <Label Content="Provisioning Date:" Grid.Row="7" Margin="2,232,384,-251"/>
+        <DatePicker SelectedDate="{Binding ProvisioningDate}" Grid.Row="7" Margin="109,232,85,-260"/>
+
+        <!-- New Expiration Date field -->
+        <Label Content="Expiration Date:" Grid.Row="7" Margin="4,271,414,-298"/>
+        <DatePicker SelectedDate="{Binding ExpirationDate}" Grid.Row="7" Margin="109,272,85,-298"/>
+
+        <!-- Button shifted to the next row -->
+        <Button Content="Add Stock" Command="{Binding AddStockCommand}" Grid.Row="7" Margin="157,324,157,-343"/>
+    </Grid>
+</Window>

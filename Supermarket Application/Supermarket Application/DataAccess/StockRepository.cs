@@ -24,23 +24,23 @@ namespace Supermarket_Application.DataAccess
         {
             decimal markupPercentage = GetMarkupPercentage();
             stock.SellingPrice = stock.PurchasePrice + (stock.PurchasePrice * markupPercentage / 100);
-            _context.Stocks.Add(stock);
+            _context.Stock.Add(stock);
             _context.SaveChanges();
         }
 
         public Stock GetById(int id)
         {
-            return _context.Stocks.Find(id);
+            return _context.Stock.Find(id);
         }
 
         public IEnumerable<Stock> GetAll()
         {
-            return _context.Stocks.ToList();
+            return _context.Stock.ToList();
         }
 
         public void Update(Stock stock)
         {
-            var existingStock = _context.Stocks.AsNoTracking().FirstOrDefault(s => s.StockID == stock.StockID);
+            var existingStock = _context.Stock.AsNoTracking().FirstOrDefault(s => s.StockID == stock.StockID);
             if (existingStock == null)
             {
                 throw new ArgumentException("Stock isn't  found");
@@ -65,7 +65,7 @@ namespace Supermarket_Application.DataAccess
 
         public void Delete(int id)
         {
-            var stock = _context.Stocks.Find(id);
+            var stock = _context.Stock.Find(id);
             if (stock != null)
             {
                 stock.IsActive = false;

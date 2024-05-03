@@ -15,15 +15,13 @@ using System.Windows.Shapes;
 namespace Supermarket_Application.Views
 {
     /// <summary>
-    /// Interaction logic for AddProductView.xaml
+    /// Interaction logic for AddStockView.xaml
     /// </summary>
-    public partial class AddProductView : Window
+    public partial class AddStockView : Window
     {
-        public AddProductView()
+        public AddStockView()
         {
             InitializeComponent();
         }
-
-       
     }
 }

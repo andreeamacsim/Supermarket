@@ -35,3 +35,5 @@ C:\Users\Andreea\Desktop\Supermarket\Supermarket Application\Supermarket Applica
 C:\Users\Andreea\Desktop\Supermarket\Supermarket Application\Supermarket Application\obj\Debug\Views\AddProductView.baml
 C:\Users\Andreea\Desktop\Supermarket\Supermarket Application\Supermarket Application\obj\Debug\Views\LogicalDeletionView.baml
 C:\Users\Andreea\Desktop\Supermarket\Supermarket Application\Supermarket Application\obj\Debug\Views\UpdateProductPriceView.baml
+C:\Users\Andreea\Desktop\Supermarket\Supermarket Application\Supermarket Application\obj\Debug\Views\AddStockView.g.cs
+C:\Users\Andreea\Desktop\Supermarket\Supermarket Application\Supermarket Application\obj\Debug\Views\AddStockView.baml
