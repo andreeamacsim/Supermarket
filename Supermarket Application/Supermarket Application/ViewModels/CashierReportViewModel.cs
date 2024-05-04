@@ -2,8 +2,10 @@
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
+using System.Windows.Input;
 using Supermarket_Application.DataAccess;
 using Supermarket_Application.Models;
+using Supermarket_Application.Views;
 
 namespace Supermarket_Application.ViewModels
 {
@@ -60,14 +62,20 @@ namespace Supermarket_Application.ViewModels
                 }
             }
         }
-
+        public ICommand ShowLargestReceiptCommand { get; private set; }
         public CashierReportViewModel()
         {
             Cashiers = new ObservableCollection<User>(_context.Users.Where(u => u.UserType == "Cashier").ToList());
             InitializeMonthsAndYears();
             DailyTotals = new ObservableCollection<DailyTotal>();
+            ShowLargestReceiptCommand = new RelayCommand(ExecuteShowLargestReceipt);
         }
 
+        private void ExecuteShowLargestReceipt(object parameter)
+        {
+             LargestReceiptView receiptWindow = new LargestReceiptView();
+              receiptWindow.ShowDialog(); 
+        }
         private void InitializeMonthsAndYears()
         {
             Months = new ObservableCollection<int>(Enumerable.Range(1, 12));

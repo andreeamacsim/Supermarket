@@ -71,7 +71,9 @@
     <Compile Include="ViewModels\AddStockViewModel.cs" />
     <Compile Include="ViewModels\AdministratorViewModel.cs" />
     <Compile Include="ViewModels\CashierReportViewModel.cs" />
+    <Compile Include="ViewModels\CashierViewModel.cs" />
     <Compile Include="ViewModels\CategoryTotalPriceViewModel.cs" />
+    <Compile Include="ViewModels\LargestReceiptViewModel.cs" />
     <Compile Include="ViewModels\LogicalDeletionViewModel.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
@@ -94,6 +96,9 @@
     </Compile>
     <Compile Include="Views\CategoryTotalPriceView.xaml.cs">
       <DependentUpon>CategoryTotalPriceView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LargestReceiptView.xaml.cs">
+      <DependentUpon>LargestReceiptView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\LogicalDeletionView.xaml.cs">
       <DependentUpon>LogicalDeletionView.xaml</DependentUpon>
@@ -140,6 +145,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\LargestReceiptView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\LogicalDeletionView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -156,13 +165,6 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BusinessLogic\CategoryService.cs" />
-    <Compile Include="BusinessLogic\ManufacturerService.cs" />
-    <Compile Include="BusinessLogic\OfferService.cs" />
-    <Compile Include="BusinessLogic\ProductService.cs" />
-    <Compile Include="BusinessLogic\ReceiptService.cs" />
-    <Compile Include="BusinessLogic\StockService.cs" />
-    <Compile Include="BusinessLogic\UserService.cs" />
     <Compile Include="DataAccess\CategoryRepository.cs" />
     <Compile Include="DataAccess\ManufacturerRepository.cs" />
     <Compile Include="DataAccess\OfferRepository.cs" />

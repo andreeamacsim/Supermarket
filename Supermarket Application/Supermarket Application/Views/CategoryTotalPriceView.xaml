@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Supermarket_Application.Views"
         xmlns:vm="clr-namespace:Supermarket_Application.ViewModels"
         mc:Ignorable="d"
-        Title="CategoryTotalPriceView" Height="250" Width="500">
+        Title="CategoryTotalPriceView" Height="250" Width="500" WindowStartupLocation="CenterScreen">
     <Window.DataContext>
         <vm:CategoryTotalPriceViewModel/>
     </Window.DataContext>

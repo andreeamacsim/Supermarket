@@ -3,10 +3,66 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Supermarket_Application.Views"
+        xmlns:local="clr-namespace:Supermarket_Application.ViewModels"
         mc:Ignorable="d"
         Title="CashierView" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Window.DataContext>
+        <local:CashierViewModel/>
+    </Window.DataContext>
+
+    <Window.Resources>
+        <Style TargetType="TextBlock" x:Key="WindowTitleStyle">
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="Margin" Value="0,20,0,0"/>
+        </Style>
+        <Style TargetType="Button" x:Key="WindowButtonStyle">
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="Margin" Value="253,0,0,0"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Background">
+                <Setter.Value>
+                    <RadialGradientBrush>
+                        <GradientStop Color="#FFFB98B8" Offset="1"/>
+                        <GradientStop Color="#FFD14B4B"/>
+                    </RadialGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="BorderBrush" Value="#FFFFB1B1"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="5">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
     <Grid>
-        
+        <Image Source="C:\Users\Andreea\Desktop\Supermarket\Supermarket Application\Supermarket Application\cashierBackground.jpeg" Stretch="Fill" />
+        <TextBlock Text="Cashier Dashboard" Style="{StaticResource WindowTitleStyle}" FontWeight="Bold" FontSize="48" HorizontalAlignment="Left" Margin="184,64,0,0" Width="446">
+            <TextBlock.Foreground>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FFA41B1B" Offset="1"/>
+                    <GradientStop Color="#FFCF5959" Offset="0"/>
+                </RadialGradientBrush>
+            </TextBlock.Foreground>
+        </TextBlock>
+        <Button Content="Search product" Style="{StaticResource WindowButtonStyle}" Command="{Binding }" Margin="0,171,0,0" Width="300" Height="46" HorizontalAlignment="Center"/>
+
+
     </Grid>
 </Window>

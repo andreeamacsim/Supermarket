@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Supermarket_Application.BusinessLogic
+namespace Supermarket_Application.ViewModels
 {
-    internal class OfferService
+    internal class CashierViewModel
     {
     }
 }
