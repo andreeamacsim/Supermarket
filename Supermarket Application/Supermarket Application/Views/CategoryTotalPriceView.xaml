@@ -14,7 +14,7 @@
         <Image Source="C:\Users\Andreea\Desktop\Supermarket\Supermarket Application\Supermarket Application\adminBackground.jpeg" Stretch="UniformToFill" />
         <DataGrid ItemsSource="{Binding CategoryTotalPrices}" AutoGenerateColumns="False"
                   HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="-0.182,0.628" Background="#FFFCD7CF" FontFamily="Sitka Small" FontWeight="Bold" FontStyle="Italic"
-                  ColumnWidth="*" Width="450" Height="22">
+                  ColumnWidth="*" Width="450">
             <DataGrid.Resources>
                 <!-- Stil pentru celule -->
                 <Style TargetType="DataGridCell">
@@ -23,11 +23,6 @@
                     <Setter Property="Padding" Value="5"/>
                     <Setter Property="BorderThickness" Value="1"/>
                     <Setter Property="BorderBrush" Value="#FFFFE3D8"/>
-                </Style>
-                <Style TargetType="DataGridColumnHeader">
-                    <Setter Property="Foreground" Value="#FFE35C8E"/>
-                    <Setter Property="FontWeight" Value="Bold"/>
-                    <Setter Property="FontStyle" Value="Italic"/>
                 </Style>
             </DataGrid.Resources>
             <DataGrid.Columns>

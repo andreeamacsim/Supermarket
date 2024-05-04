@@ -14,7 +14,7 @@ namespace Supermarket_Application.DataAccess
         public DbSet<Category> Categories { get; set; }
         public DbSet<Stock> Stock { get; set; }
         public DbSet<User> Users { get; set; }
-       // public DbSet<Receipt> Receipts { get; set; }
+       public DbSet<Receipt> Receipts { get; set; }
         public DbSet<Offer> Offers { get; set; }
     }
 }

@@ -70,6 +70,7 @@
     <Compile Include="ViewModels\AddProductViewModel.cs" />
     <Compile Include="ViewModels\AddStockViewModel.cs" />
     <Compile Include="ViewModels\AdministratorViewModel.cs" />
+    <Compile Include="ViewModels\CashierReportViewModel.cs" />
     <Compile Include="ViewModels\CategoryTotalPriceViewModel.cs" />
     <Compile Include="ViewModels\LogicalDeletionViewModel.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
@@ -84,6 +85,9 @@
     </Compile>
     <Compile Include="Views\AdministratorView.xaml.cs">
       <DependentUpon>AdministratorView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CashierReportView.xaml.cs">
+      <DependentUpon>CashierReportView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\CashierView.xaml.cs">
       <DependentUpon>CashierView.xaml</DependentUpon>
@@ -121,6 +125,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\AdministratorView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CashierReportView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

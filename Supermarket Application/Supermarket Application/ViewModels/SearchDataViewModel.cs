@@ -16,6 +16,15 @@ namespace Supermarket_Application.ViewModels
     {
         public ICommand DisplayManufacturerCommand { get; private set; }
         public ICommand DisplayCategoryTotalPriceCommand { get; private set; }
+        public ICommand OpenCashierReportCommand => new RelayCommand(OpenCashierReport);
+
+        private void OpenCashierReport(object parameter)
+        {
+            CashierReportView window = new CashierReportView();
+            window.DataContext = new CashierReportViewModel();
+            window.Show();
+        }
+
 
         public SearchDataViewModel()
         {

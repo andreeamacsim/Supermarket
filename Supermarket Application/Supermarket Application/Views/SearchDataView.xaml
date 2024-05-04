@@ -60,8 +60,9 @@
                 </RadialGradientBrush>
             </TextBlock.Foreground>
         </TextBlock>
-        <Button Content="Display manufacturer" Style="{StaticResource WindowButtonStyle}" Command="{Binding DisplayManufacturerCommand}" Margin="253,182,0,0" Width="299" Height="46"/>
-        <Button Content="Display Category Total Price" Style="{StaticResource WindowButtonStyle}" Command="{Binding DisplayCategoryTotalPriceCommand}" Margin="253,265,0,0" Height="51" Width="299" />
+        <Button Content="Display manufacturer" Style="{StaticResource WindowButtonStyle}" Command="{Binding DisplayManufacturerCommand}" Margin="0,152,0,0" Width="300" Height="46" HorizontalAlignment="Center"/>
+        <Button Content="Display Category Total Price" Style="{StaticResource WindowButtonStyle}" Command="{Binding DisplayCategoryTotalPriceCommand}" Margin="0,217,0,0" Height="51" Width="299" HorizontalAlignment="Center" />
+        <Button Content="Amounts collected per cashier" Style="{StaticResource WindowButtonStyle}" Command="{Binding OpenCashierReportCommand }" Margin="258,293,0,0" Height="51" Width="298" />
 
 
     </Grid>

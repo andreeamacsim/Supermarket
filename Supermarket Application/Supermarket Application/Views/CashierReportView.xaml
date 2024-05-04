@@ -1,0 +1,78 @@
+﻿<Window x:Class="Supermarket_Application.Views.CashierReportView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:Supermarket_Application.ViewModels"
+        Title="Cashier Report" Height="450" Width="800">
+    <Window.DataContext>
+        <local:CashierReportViewModel/>
+    </Window.DataContext>
+    <Grid Margin="10">
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\Andreea\Desktop\Supermarket\Supermarket Application\Supermarket Application\addProduct.jpeg" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+
+        <!-- ComboBox for selecting a cashier -->
+        <ComboBox Grid.Row="0" Margin="5" ItemsSource="{Binding Cashiers}"
+                  DisplayMemberPath="Username" SelectedItem="{Binding SelectedCashier}"
+                  Height="30" Width="300"/>
+
+        <!-- StackPanel for selecting the month and year -->
+        <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="5" Height="30">
+            <ComboBox Width="145" Margin="0,0,5,0"
+          ItemsSource="{Binding Months}"
+          SelectedItem="{Binding SelectedMonth}" />
+
+            <!-- ComboBox for selecting the year -->
+            <ComboBox Width="145"
+          ItemsSource="{Binding Years}"
+          SelectedItem="{Binding SelectedYear}" />
+        </StackPanel>
+
+        <!-- DataGrid for displaying daily totals -->
+        <DataGrid Grid.Row="3" Margin="5" ItemsSource="{Binding DailyTotals}" AutoGenerateColumns="False" BorderBrush="#FFE9D2CC">
+            <DataGrid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFEAD3CD" Offset="1"/>
+                    <GradientStop Color="White"/>
+                </LinearGradientBrush>
+            </DataGrid.Background>
+            <DataGrid.Columns>
+                <!-- Coloana pentru ziua din luna -->
+                <DataGridTextColumn Header="Day" Binding="{Binding Day}" Width="100">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="Foreground" Value="#FFD68873"/>
+                            <!-- Schimbă culoarea textului -->
+                            <Setter Property="FontWeight" Value="Bold"/>
+                            <!-- Face textul bold -->
+                            <Setter Property="FontStyle" Value="Italic"/>
+                            <!-- Face textul italic -->
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+
+                <!-- Coloana pentru totalul colectat -->
+                <DataGridTextColumn Header="Total Collected" Binding="{Binding Total, StringFormat=C}" Width="*">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="Foreground" Value="#FFD68873"/>
+                            <!-- Schimbă culoarea textului -->
+                            <Setter Property="FontWeight" Value="Bold"/>
+                            <!-- Face textul bold -->
+                            <Setter Property="FontStyle" Value="Italic"/>
+                            <!-- Face textul italic -->
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</Window>
